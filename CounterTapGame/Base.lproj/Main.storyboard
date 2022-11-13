@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="82u-Ej-AKt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="82u-Ej-AKt">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -87,29 +86,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Score:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Zk-Ly-oPx">
-                                <rect key="frame" x="20" y="192" width="374" height="33.5"/>
+                                <rect key="frame" x="20" y="188" width="374" height="33.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QcP-oo-Lra">
-                                <rect key="frame" x="20" y="265.5" width="374" height="0.0"/>
+                                <rect key="frame" x="20" y="261.5" width="374" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="68"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fln-vN-PgG">
-                                <rect key="frame" x="20" y="465.5" width="374" height="34"/>
+                                <rect key="frame" x="20" y="461.5" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lWg-Xe-AnO">
-                                <rect key="frame" x="20" y="604" width="374" height="34.5"/>
+                                <rect key="frame" x="20" y="596.5" width="374" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Show All Scores"/>
+                                <connections>
+                                    <action selector="showAllScores:" destination="r6s-rP-tai" eventType="touchUpInside" id="QzI-ta-nQn"/>
+                                    <segue destination="3xg-h7-igF" kind="show" identifier="toTableViewVc" id="0z1-oH-czi"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0SA-MV-IMX">
-                                <rect key="frame" x="163" y="519.5" width="90" height="34.5"/>
+                                <rect key="frame" x="163" y="515.5" width="90" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Save User"/>
                                 <connections>
@@ -152,7 +155,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pu2-TJ-0N7">
-                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="3xg-h7-igF" id="hah-Ob-ZN7"/>
@@ -169,6 +172,10 @@
                             <constraint firstItem="yzw-jn-e2A" firstAttribute="bottom" secondItem="pu2-TJ-0N7" secondAttribute="bottom" id="wUB-zk-FDg"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="tEO-us-h4D"/>
+                    <connections>
+                        <outlet property="scoreListTableView" destination="pu2-TJ-0N7" id="THp-n6-X5B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jDk-Ni-hE4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -180,7 +187,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="82u-Ej-AKt" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8rL-4t-feC">
-                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -193,40 +200,6 @@
             <point key="canvasLocation" x="-65.217391304347828" y="69.642857142857139"/>
         </scene>
         <!--Score View Controller-->
-        <scene sceneID="A4e-Df-lic">
-            <objects>
-                <viewController id="ZQr-oE-0p7" customClass="ScoreViewController" customModule="CounterTapGame" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="iON-Ru-Rud">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="BwY-qk-XnB">
-                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="ZQr-oE-0p7" id="QiR-Og-LCt"/>
-                                    <outlet property="delegate" destination="ZQr-oE-0p7" id="TYG-nL-HyL"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="xeo-gt-d7B"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="BwY-qk-XnB" firstAttribute="leading" secondItem="xeo-gt-d7B" secondAttribute="leading" id="M6K-Zk-abW"/>
-                            <constraint firstItem="xeo-gt-d7B" firstAttribute="trailing" secondItem="BwY-qk-XnB" secondAttribute="trailing" id="NSH-wt-Nhe"/>
-                            <constraint firstItem="BwY-qk-XnB" firstAttribute="top" secondItem="xeo-gt-d7B" secondAttribute="top" id="Whg-fH-fHD"/>
-                            <constraint firstItem="xeo-gt-d7B" firstAttribute="bottom" secondItem="BwY-qk-XnB" secondAttribute="bottom" id="sTW-po-FyM"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="scoreListTableView" destination="BwY-qk-XnB" id="4sg-DC-i17"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JvR-Vs-lom" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1029" y="59"/>
-        </scene>
-        <!--Score View Controller-->
         <scene sceneID="gLL-4h-XtA">
             <objects>
                 <viewController id="Y0N-vA-cf3" customClass="ScoreViewController" customModule="CounterTapGame" customModuleProvider="target" sceneMemberID="viewController">
@@ -235,7 +208,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OKR-r2-i6r">
-                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Y0N-vA-cf3" id="AfL-4q-KAB"/>
@@ -258,7 +231,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EHy-hN-c5Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1029" y="59"/>
+            <point key="canvasLocation" x="1607" y="295"/>
         </scene>
     </scenes>
     <resources>

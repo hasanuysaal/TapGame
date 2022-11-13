@@ -19,9 +19,9 @@ class ScoreListTableViewCell: UITableViewCell {
         // Initialization code
     }
     
-    func configureCell(name: String, score: Int) {
+    func configureCell(name: String, score: String) {
         nameLabel.text = name
-        scoreLabel.text = String(score)
+        scoreLabel.text = score
     }
     
 }

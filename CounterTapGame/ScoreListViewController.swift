@@ -18,9 +18,7 @@ class ScoreListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        name = UserDefaults.standard.array(forKey: "users") as? [String] ?? []
-        score = UserDefaults.standard.array(forKey: "scores") as? [String] ?? []
+
         
     
         
@@ -30,6 +28,8 @@ class ScoreListViewController: UIViewController {
     
     
     override func viewWillAppear(_ animated: Bool) {
+        name = UserDefaults.standard.array(forKey: "users") as? [String] ?? []
+        score = UserDefaults.standard.array(forKey: "scores") as? [String] ?? []
         for element in name {
             print(element)
         }
@@ -46,13 +46,14 @@ extension ScoreListViewController: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return score.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = scoreListTableView.dequeueReusableCell(withIdentifier: "ScoreListTableViewCell", for: indexPath) as? ScoreListTableViewCell
-        cell?.configureCell(name: "mehmet", score: 100)
+        
+        cell?.configureCell(name: name[indexPath.row], score: score[indexPath.row])
         return cell ?? UITableViewCell()
         
     }

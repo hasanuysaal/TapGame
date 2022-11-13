@@ -51,6 +51,9 @@ class ResultViewController: UIViewController {
         print(self.userArr)
     }
     
+    @IBAction func showAllScores(_ sender: Any) {
+        performSegue(withIdentifier: "toTableViewVc", sender: nil)
+    }
     /*
     // MARK: - Navigation
 
