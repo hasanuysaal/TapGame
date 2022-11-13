@@ -24,6 +24,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         highScore =  UserDefaults.standard.integer(forKey: "HighScore")
+        
         highScoreLabel.text = "High Score : \(highScore)"
         timeLabel.text = "Time Left: \(counter)"
         
@@ -48,11 +49,23 @@ class ViewController: UIViewController {
         
         if counter == 0 {
             timer.invalidate()
+            myView.isUserInteractionEnabled = false
             
             if highScore < currentScore {
+                
                 UserDefaults.standard.setValue(currentScore, forKey: "HighScore")
             }
             
+            performSegue(withIdentifier: "toResultVC", sender: nil)
+            
+        }
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toResultVC" {
+            let destinationVC = segue.destination as! ResultViewController
+            destinationVC.currentScore = String(self.currentScore)
         }
         
     }

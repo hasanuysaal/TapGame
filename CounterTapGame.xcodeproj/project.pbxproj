@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0441F53B2920EBAB00EDFD62 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0441F53A2920EBAB00EDFD62 /* ResultViewController.swift */; };
 		405477AF2920DEDD0050C3B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405477AE2920DEDD0050C3B5 /* AppDelegate.swift */; };
 		405477B12920DEDD0050C3B5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405477B02920DEDD0050C3B5 /* SceneDelegate.swift */; };
 		405477B32920DEDD0050C3B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405477B22920DEDD0050C3B5 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0441F53A2920EBAB00EDFD62 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		405477AB2920DEDD0050C3B5 /* CounterTapGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CounterTapGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		405477AE2920DEDD0050C3B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		405477B02920DEDD0050C3B5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				405477B72920DEDE0050C3B5 /* Assets.xcassets */,
 				405477B92920DEDE0050C3B5 /* LaunchScreen.storyboard */,
 				405477BC2920DEDE0050C3B5 /* Info.plist */,
+				0441F53A2920EBAB00EDFD62 /* ResultViewController.swift */,
 			);
 			path = CounterTapGame;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0441F53B2920EBAB00EDFD62 /* ResultViewController.swift in Sources */,
 				405477B32920DEDD0050C3B5 /* ViewController.swift in Sources */,
 				405477AF2920DEDD0050C3B5 /* AppDelegate.swift in Sources */,
 				405477B12920DEDD0050C3B5 /* SceneDelegate.swift in Sources */,
