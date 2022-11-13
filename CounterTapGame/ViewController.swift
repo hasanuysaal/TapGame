@@ -24,7 +24,6 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         highScore =  UserDefaults.standard.integer(forKey: "HighScore")
-        
         highScoreLabel.text = "High Score : \(highScore)"
         timeLabel.text = "Time Left: \(counter)"
         
