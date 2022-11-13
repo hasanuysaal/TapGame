@@ -14,6 +14,9 @@
 		405477B62920DEDD0050C3B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 405477B42920DEDD0050C3B5 /* Main.storyboard */; };
 		405477B82920DEDE0050C3B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 405477B72920DEDE0050C3B5 /* Assets.xcassets */; };
 		405477BB2920DEDE0050C3B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 405477B92920DEDE0050C3B5 /* LaunchScreen.storyboard */; };
+		B3960AEC2920F79F00CF5A63 /* ScoreListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3960AEA2920F79F00CF5A63 /* ScoreListTableViewCell.swift */; };
+		B3960AED2920F79F00CF5A63 /* ScoreListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3960AEB2920F79F00CF5A63 /* ScoreListTableViewCell.xib */; };
+		B3960AEF2920F7B700CF5A63 /* ScoreListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3960AEE2920F7B700CF5A63 /* ScoreListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		405477B72920DEDE0050C3B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		405477BA2920DEDE0050C3B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		405477BC2920DEDE0050C3B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3960AEA2920F79F00CF5A63 /* ScoreListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreListTableViewCell.swift; sourceTree = "<group>"; };
+		B3960AEB2920F79F00CF5A63 /* ScoreListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScoreListTableViewCell.xib; sourceTree = "<group>"; };
+		B3960AEE2920F7B700CF5A63 /* ScoreListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 		405477AD2920DEDD0050C3B5 /* CounterTapGame */ = {
 			isa = PBXGroup;
 			children = (
+				B3960AE92920F77900CF5A63 /* Cell */,
 				405477AE2920DEDD0050C3B5 /* AppDelegate.swift */,
 				405477B02920DEDD0050C3B5 /* SceneDelegate.swift */,
 				405477B22920DEDD0050C3B5 /* ViewController.swift */,
@@ -66,8 +73,18 @@
 				405477B92920DEDE0050C3B5 /* LaunchScreen.storyboard */,
 				405477BC2920DEDE0050C3B5 /* Info.plist */,
 				0441F53A2920EBAB00EDFD62 /* ResultViewController.swift */,
+				B3960AEE2920F7B700CF5A63 /* ScoreListViewController.swift */,
 			);
 			path = CounterTapGame;
+			sourceTree = "<group>";
+		};
+		B3960AE92920F77900CF5A63 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B3960AEA2920F79F00CF5A63 /* ScoreListTableViewCell.swift */,
+				B3960AEB2920F79F00CF5A63 /* ScoreListTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +147,7 @@
 			files = (
 				405477BB2920DEDE0050C3B5 /* LaunchScreen.storyboard in Resources */,
 				405477B82920DEDE0050C3B5 /* Assets.xcassets in Resources */,
+				B3960AED2920F79F00CF5A63 /* ScoreListTableViewCell.xib in Resources */,
 				405477B62920DEDD0050C3B5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,7 +162,9 @@
 				0441F53B2920EBAB00EDFD62 /* ResultViewController.swift in Sources */,
 				405477B32920DEDD0050C3B5 /* ViewController.swift in Sources */,
 				405477AF2920DEDD0050C3B5 /* AppDelegate.swift in Sources */,
+				B3960AEC2920F79F00CF5A63 /* ScoreListTableViewCell.swift in Sources */,
 				405477B12920DEDD0050C3B5 /* SceneDelegate.swift in Sources */,
+				B3960AEF2920F7B700CF5A63 /* ScoreListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
