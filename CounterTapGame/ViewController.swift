@@ -33,9 +33,15 @@ class ViewController: UIViewController {
         let tapGR = UITapGestureRecognizer(target: self, action: #selector(updateScore))
         myView.addGestureRecognizer(tapGR)
         
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerFunc), userInfo: nil, repeats: true)
+        
     }
 
+    
+    override func viewWillAppear(_ animated: Bool) {
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerFunc), userInfo: nil, repeats: true)
+        counter = 3
+        currentScore = 0
+    }
 
     @objc func updateScore(){
         startLabel.text = String(currentScore)
